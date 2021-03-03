@@ -1,0 +1,46 @@
+body{
+	color:white;
+}
+.turncard{
+    display:flex;
+	width: 240px;
+	height:100px;
+	margin: 20px;
+	float: left;
+
+}
+.turncard .front{
+    display:flex;
+    position: absolute;
+	transform: perspective(600px) rotateY(0deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+	width: 200px;
+	height:100px;
+	padding: 40px;
+	background-color:rgba(0,0,0,0.2);
+	border-radius: 20px;
+
+}
+.turncard .back{
+	display:flex;
+	position: absolute;
+	transform:perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+	width: 200px;
+	height:100px;
+	padding: 40px;
+	font-size:15px;
+	border-radius: 20px;
+
+}
+.turncard:hover > .front{
+	transform: perspective(700px) rotateY(-180deg);
+
+}
+
+.turncard:hover > .back{
+	transform: perspective(700px) rotateY(0deg);
+
+}

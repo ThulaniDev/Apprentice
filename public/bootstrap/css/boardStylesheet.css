@@ -1,0 +1,194 @@
+.invisibleform{
+    top:90px;
+    position:fixed;
+    height:15%;
+    width:40%;
+    padding:20px;
+    background-color:rgba(0,0,0,0.2)
+ }
+
+input[type=text] {
+    width:250px;
+    height:30px;
+    border-radius:20px;
+    background-color:rgba(0,0,0,0.3);
+    text-align:center;
+    color:white;
+}
+input[type=submit]{
+    width:110px;
+    height:30px;
+    border-radius:20px;
+    background-color:rgba(0,0,0,0.3);
+    text-align:center;
+    color:white;
+}
+input[type=submit]:hover{
+    background-color:rgba(0,0,0,0.1);
+    cursor:pointer;
+
+}
+@keyframes fade{
+0%{opacity:1;}
+100%{opacity:.1; display:none}
+}
+.faddingframe{
+    animation-name:fade;
+    animation-duration:3s;
+
+}
+::-webkit-scrollbar{
+        width:15px;
+
+    }
+    ::-webkit-scrollbar-track{
+        background:black;
+        border-radius:20px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background:grey;
+        border-radius:20px;
+
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background-color:#b06f00 ;
+    }
+
+
+@keyframes boardcolor{
+		0%{
+			background-color:red;
+		}
+		10%{
+			background-color:green;
+		}
+		20%{
+			background-color:blue;
+		}
+		30%{
+			background-color:gold;
+		}
+		40%{
+			background-color:black;
+		}
+		50%{
+			background-color:purple;
+		}
+		60%{
+			background-color:orange;
+		}
+		70%{
+			background-color:yellow;
+		}
+		80%{
+			background-color:rgb(2,2,2);
+		}
+		90%{
+			background-color:rgb(12,12,12);
+		}
+		100%{
+			background-color:rgb(0,0,12);
+		}
+		
+	}
+
+	.frame {
+		position: absolute;
+		margin-top:130px;
+		width: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 30px;
+		animation-name:boardcolor;
+		animation-duration: 5s;
+		animation-iteration-count:infinite;
+		transform:translate(15%,10%) rotateY(-20deg) rotate(-30deg) skew(25deg);
+		box-shadow: 10px 20px 20px rgba(0,0,0,.5);
+		border-radius: 10px;
+		opacity: .3;
+	}
+	.disabled{
+		display: none;
+	}
+	.frame .container-1{
+
+		border: 1px solid #000000;
+		margin: 0 auto;
+		justify-content: center;
+		padding: 10px;
+		background-color:rgba(0,0,0,0.3)
+	}
+	.frame .container-1:after{
+		content: '';
+		position: absolute;
+		margin-top:10px;
+		width: 70%;
+		transform:translate(15%,10%) rotateY(-20deg) rotate(-30deg) skew(25deg);
+	
+	}
+
+	.frame:hover{
+		box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+	}
+	.frame .container-1 .flex-box{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px;
+		
+	}
+
+
+	#c7two , #c9four , #c10six , #c8eight , #c7ten , #c9twelf , #c10four-teen , #c8six-teen , #c6seven-teen , #c4fifteen , #c3third-teen , #c5eleven , #c6nine , #c4seven , #c3five , #c5three{
+		background-color: blue;
+
+	}
+
+	#c6two ,  #c8three ,  #c10five , #c9seven ,  #c7nine , #c8eleven ,  #c10third-teen , #c9fifteen , #c7seven-teen , #c5six-teen , #c3four-teen , #c4twelf , #c6ten , #c5eight , #c3six , #c4four {
+		background-color: red;
+
+	}
+	
+	#c6two , #c7two , #c8three , #c9four , #c10five , #c10six , #c9seven , #c8eight , #c7nine , #c7ten , #c8eleven , #c9twelf , #c10third-teen , #c10four-teen , #c9fifteen , #c8six-teen , #c7seven-teen , #c6seven-teen , #c5six-teen , #c4fifteen , #c3four-teen , #c3third-teen , #c4twelf , #c5eleven , #c6ten , #c6nine , #c5eight , #c4seven , #c3six , #c3five , #c4four , #c5three{
+		width: 60px;
+		height: 50px;
+		border: 2px solid #000000;
+		border-radius: 20px;
+		border: 1px solid grey;
+		margin: 2px;
+		top: 30%;
+		box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+		
+	
+	}
+
+	#c6two:hover , #c7two:hover , #c8three:hover , #c9four:hover , #c10five:hover , #c10six:hover , #c9seven:hover , #c8eight:hover , #c7nine:hover , #c7ten:hover , #c8eleven:hover , #c9twelf:hover , #c10third-teen:hover , #c10four-teen:hover , #c9fifteen:hover , #c8six-teen:hover , #c7seven-teen:hover , #c6seven-teen:hover , #c5six-teen:hover , #c4fifteen:hover , #c3four-teen:hover , #c3third-teen:hover , #c4twelf:hover , #c5eleven:hover , #c6ten:hover , #c6nine:hover , #c5eight:hover , #c4seven:hover , #c3six:hover , #c3five:hover , #c4four:hover , #c5three:hover{
+		box-shadow: 5px 5px 5px aqua;
+	}	
+
+	#controller{
+		height: 20%;
+		width: 30%;
+		padding: 20px;
+		border: 4px solid gray;
+		border-radius: 20px;
+		text-align: center;
+		color:white;
+		letter-spacing: 2px;
+		border-style:dashed;	
+	}
+	#start-link.inactive{
+		display: none;
+
+	}
+	#words{
+		list-style: none;
+		padding: 25px;
+		justify-content: center;
+		margin-top: 2%;
+		margin-left: 20%;
+		
+	}
+	#words li{
+		margin-top: 5%;
+		
+	} 

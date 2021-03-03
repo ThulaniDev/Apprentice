@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/footer.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/admin.css">
+      
+        
+    </head>
+    <body>
+       
+        <!-- navigation bar -->
+        <nav class="navbar navbar-light navColoring" id="nav" >
+            
+            <button class="navbar-toggler" type="button" id="navButton" data-toggle="collapse" data-target = "#navInfo" aria-controls = "navInfo" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar navbar-toggler-icon"></span>
+
+            </button>
+            <a class="nav nav-item nav-link ml-1" id="signing-out-brand" href="/logout/admin">Sign Out (<%= admin.email %>) </a>
+            
+            <a class="navbar navbar-brand my-2" href="#"></a>
+            
+            <div class="collapse navbar-collapse" id="navInfo">
+                <div class="navbar-nav my-4">
+                    
+                    <a class="nav nav-item nav-link ml-1 active" href="#">Home <span class="sr-only"></span></a>
+                    <a class="nav nav-item nav-link ml-1" href="#">Newsfeed</a>
+                    <a class="nav nav-item nav-link ml-1" href="#">Contact Us</a>
+                    <a class="nav nav-item nav-link ml-1" href="#">About Us</a>
+                    
+                </div>
+
+            </div>
+                    
+        </nav>
+        <!-- creating the main content of the page    -->
+        <div class="container my-5" id="cards-container">
+           
+            <div class="row" id="row-cards">
+                <div class="col-lg col-md col-sm" >
+                    <div class="card bg-transparent mx-3 my-4 text-secondary bg-transparent" id="dashboardCard" >
+                        <div class="card-titlle">
+                            <h6 class="display-4 words mx-3 my-4" id="Dashboard-title">Dashboard <hr></h6>
+                        </div>  
+                        
+                        <table class="table-responsive-md{-sm|-md|-lg|xl} table-borderless table-hover" id ="users-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Stuff Number</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Results(%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% let count = 0 %> 
+                                <% for(let user of users ){ %>
+                                    <tr><td>  <%= count + 1  %>  </td><td>  <%= user.firstname  %>  </td><td>  <%= user.empnum  %>  </td><td>    </td><td>    </td></tr>
+                                <% } %>     
+                                
+                            </tbody>
+                            
+                                
+                          </table>
+                        <div class="card-footer bg-transparent">
+                            <a href="" class="btn btn-outline-info" id="card-dashboard" data-toggle="modal" data-target="#dashboardContent" >Add User</a>
+                            <a href="#" class="btn btn-outline-info">Edit User</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            <!-- dashboard content -->
+
+            <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dashboardContent" aria-hidden="true" id="dashboardContent">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content bg-transparent">
+                        <div class="modal-header">
+                            <div class="modal-title">
+                                <h3 class="display-4 words mx-3 my-4">Updates</h3>    
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            
+                        </div>
+                        <div class="modal-body">
+                            <!-- inside the modal dashboard body -->
+                            <div class="row" id="row-cards">
+                                
+                                <div class="col-lg col-md col-sm">
+                                    <div class="card mx-3 my-4" id="add-user-container">
+                                        <div class="card-titlle">
+                                            <h6 class="words mx-3 my-4" id="Add-User-title">Add User<hr></h6>
+                                        </div>  
+                                        <form method="POST" action="/admin/member/add-user">
+                                            <div class="modal-body">
+                                                
+                                                <div class="mx-3 my-5">
+                                                    <label id="p" class="lead mx-1 my-2" for="EmpNo">Emp.num</label>
+                                                    <input class="form-control form-control" name="empnum" type="text"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="firstname">Firstname</label>
+                                                    <input class="form-control form-control" name="firstname" type="text"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="lastname">Lastname</label>
+                                                    <input class="form-control form-control" name="lastname" type="text"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="lastname">Username</label>
+                                                    <input class="form-control form-control" name="username" type="text"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="email">Email</label>
+                                                    <input class="form-control form-control" name="email" placeholder="example@example.com" type="email"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="phonenumber">Phone Number</label>
+                                                    <input class="form-control form-control" name="phonenumber" type="number"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="Idnumber">ID Number</label>
+                                                    <input class="form-control form-control" name="idnumber" type="number"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="password">Password</label>
+                                                    <input class="form-control form-control" name="password" type="password"/>
+                                                    <label id="p" class="lead mx-1 my-2" for="confirm-password">Confirm Password</label>
+                                                    <input class="form-control form-control" name="confirmpassword" type="password"/>
+                                                    
+                                                    
+                                                        
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input class="btn btn-primary mb-3" id="btnsave" value="Save" type="submit"/>
+                                            
+                                                <!-- <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                             -->
+                                            </div>
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        
+                    </div>    
+                        
+                </div>
+            </div>
+            
+
+            <!-- view reports content -->
+
+            
+
+        </div>
+        <%- include('./partials/footer') %>
+         
+        <script src="/public/bootstrap/js/bootstrap/jquery.js"></script>
+        <script src="/public/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+        <script src="/public/bootstrap/js/redirecting.js"></script>
+    </body>
+</html>

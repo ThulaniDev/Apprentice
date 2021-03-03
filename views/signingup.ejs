@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/footer.css">
+    <link rel="stylesheet" href="/public/bootstrap/css/styling.css">
+   
+ 
+    <title>Document</title>
+<style>
+
+</style>
+</head>
+<body>
+    
+    <!-- creating a welcoming jumbotron -->
+    <div class="jumbotron jumbotron-fluid bg-secondary text-white">
+        <div class="container">
+                
+            <h1 class="words">The Apprentice</h1>    
+            <p class="lead words">Increase your employee's level of Productivity...</p>
+                
+        </div>
+    
+    </div>
+  
+    
+    <!-- adding a pop up window -->
+    <div id="overlay">
+        <div class="modal">
+            <div class="modal-heading">
+                <div class="modal-title">
+                    <h3 class="display-5 words mx-3 my-5" id="modal-heading"></h3>
+                </div>
+                <div class="close-modal">
+                    <input type="submit" id="close-modal-btn" value='&times;'>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="lead mx-3 my-3">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi sint deleniti obcaecati architecto repudiandae. Eveniet fugit, quo vero maxime officia consequuntur autem, laboriosam in voluptatem tempora corporis obcaecati qui dolorum?
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- adding a pop up window for signing up  -->
+    <div class="container" id="reg-container">
+        <form method="POST" action="/register/new-member">
+            <div class="mx-3 my-5">
+                <label id="p" class="lead mx-1 my-2" for="Idnumber">ID Number</label>
+                <input class="form-control form-control" name="txtidnumber" type="number"/>
+                <label id="p" class="lead mx-1 my-2" for="firstname">Firstname</label>
+                <input class="form-control form-control" name="txtfirstname" type="text"/>
+                <label id="p" class="lead mx-1 my-2" for="lastname">Lastname</label>
+                <input class="form-control form-control" name="txtlastname" type="text"/>
+                <label id="p" class="lead mx-1 my-2" for="phonenumber">Phone Number</label>
+                <input class="form-control form-control" name="txtphoneNumber" type="number"/>
+                <label id="p" class="lead mx-1 my-2" for="email">Email</label>
+                <input class="form-control form-control" name="txtsignupemail" placeholder="example@example.com" type="email"/>
+                <label id="p" class="lead mx-1 my-2" for="password">Password</label>
+                <input class="form-control form-control" name="txtsignuppassword" type="password"/>
+                <label id="p" class="lead mx-1 my-2" for="confirm-password">Confirm Password</label>
+                <input class="form-control form-control" name="txtconfirmpassword" type="password"/>
+                
+                
+                    
+            </div>
+            <button class="btn btn-primary mb-3" id="btnsave" type="submit">Save</button> <a class="" href="/"  id="newusercredentials">Login with your new credentials</a>
+        
+        </form>
+    </div>
+
+    
+    
+    
+   
+   
+    
+ 
+    
+</body>
+</html>

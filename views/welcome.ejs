@@ -1,0 +1,185 @@
+   <!-- creating a welcoming jumbotron -->
+   <div class="jumbotron jumbotron-fluid bg-secondary text-black-50">
+    <div class="container">
+            
+        <h4 class="display-4">The Apprentice<img id="logo" src="../public//log//Transparent  The Apprentice logo .png" alt=""> </h4>    
+        <p class="words">Increase your employee's level of Productivity...</p>
+            
+    </div>
+
+</div>
+
+
+    <!-- login window -->
+    <div id="login-container">
+        <div class="row">
+            <div class="col">
+                <div class="card mx-3 my-4 border-0 text-secondary bg-transparent">
+                    
+                    
+                    <!-- Cards admin and user -->
+                    <div class="container" id="cards-container">
+                        <div class="row" id="row-cards">
+                            <div class="col-lg col-md col-sm" id="signInAsAdmin" data-toggle="modal" data-target="#signInAsAdminContent" >
+                                <div class="card mx-3 my-4 text-secondary bg-transparent" id="signInAsAdminCard" >
+                                    <div class="card-titlle">
+                                        <h6 class="display-4 words mx-3 my-4 " id="signInAsAdmin-title">Admin<hr></h6>
+                                    </div>
+                                    <div id="errors" class="container-fluid hidden" >
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <strong style="text-align: center;">"Incorrect credentials"</strong>
+                                            <button type="button" class="close" data-dismiss = "alert" aria-label="close"  >
+                                                <span arial-hidden = "true" >&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="lead mx-3 my-4">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid odit nobis unde provident quae ducimus nulla, eveniet, laborum eligendi vitae quas cupiditate temporibus, illo consectetur animi necessitatibus suscipit earum. Quod!
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg col-md col-sm" data-toggle="modal" data-target="#signInAsUserContent">
+                                <div class="card mx-3 my-4 text-secondary bg-transparent" id="signInAsUserCard">
+                                    <div class="card-titlle">
+                                        <h6 class="display-4 words mx-3 my-4 " id="signInAsUser-title">User <hr></h6>
+                                    </div> 
+                                    <div id="errorsUser" class="container-fluid hidden" >
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <strong style="text-align: center;">"Incorrect credentials"</strong>
+                                            <button type="button" id='close-Alert' class="close" data-dismiss = "alert" aria-label="close"  >
+                                                <span arial-hidden = "true" >&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="lead mx-3 my-4">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non iure quis odit aperiam facere, est reprehenderit eius saepe. Minima iure non architecto blanditiis delectus minus unde ex voluptas repellat cupiditate.
+                
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- sign-in admin content -->
+            
+                        <div class="modal fade modalAdmin" tabindex="-1" role="dialog" aria-labelledby="signInAsAdminContent" aria-hidden="true" id="signInAsAdminContent">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="modal-title">
+                                            <h3 class="display-4 words mx-3 my-4">Admin</h3>    
+                                        </div>
+                                        <button type="button" class="close" id="closing-Modal"  data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                       
+                                    </div>
+                                      
+                                    
+                                    <form action="/admin/member" method="POST" class="mx-3">
+                                        <div class="modal-body">
+                                                <form action="">
+                                                    <div class="form-group">
+                                                        <label class="lead mx-1" id="p" for="usernameInput" >Username</label>
+                                                        <input class="form-control form-control" required name="username" id="username" type="text" placeholder=""/>
+                                                        <label class="lead mx-1 my-2" id="p" for="passwordInput">Password</label>
+                                                        <input class="form-control form-control" required name="password" id="password" type="password" />
+                                                        
+                                                    </div>  
+                                                    
+                                        
+    
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="submit" id="adminFormButton"  class="btn btn-outline-primary" value="Login"/>
+                                            <a class="" href="./register" id="DontHaveAccountLink">Request an account</a>
+                                        
+                                        
+                                        </div>
+                                    </form>
+                                </div>    
+                                    
+                            </div>
+                        </div>
+            
+                        <!-- sign-in user content -->
+            
+                        <div class="modal fade modalUser" tabindex="-1" role="dialog" aria-labelledby="signInAsUserContent" aria-hidden="true" id="signInAsUserContent">
+                            
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="modal-title">
+                                            <h3 class="display-4 words mx-3 my-4">User</h3>    
+                                        </div>
+                                        <button type="button" id="closing-User-Modal" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        
+                                    </div>
+                                    <form method="POST" action="/user/member" class="mx-3">
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                    <div class="form-group">
+                                                        <label class="lead mx-1" id="p" for="emailInput" >Username</label>
+                                                        <input class="form-control form-control" required name="username" id="txtusername" type="username" />
+                                                        <label class="lead mx-1 my-2" id="p" for="passwordInput">Password</label>
+                                                        <input class="form-control form-control" required name="password" id="txtpassword" type="password" />
+                                                    </div>
+                                                    
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="submit" id="user-login-btn" class="btn btn-outline-primary"  value="Login">
+                                            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                        </div>
+                                        
+                                    </form>        
+                                    
+                                </div>    
+                                    
+                            </div>
+                        </div>
+            
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>   
+
+<!-- adding a pop up window -->
+<div id="overlay">
+    <div id="welcome-modal" class="modal">
+        <div class="modal-heading">
+            <div class="modal-title">
+                <h3 class="display-5 words mx-3 my-5" id="modal-heading"></h3>
+            </div>
+            <div class="close-modal">
+                <input type="submit" class="form form-control" id="close-modal-btn" value='&times;'>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div id="p" class="mx-3 my-3">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi sint deleniti obcaecati architecto repudiandae. Eveniet fugit, quo vero maxime officia consequuntur autem, laboriosam in voluptatem tempora corporis obcaecati qui dolorum?
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/public/bootstrap/js/bootstrap/jquery.js"></script>
+<script src="/public/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+<script src="/public/bootstrap/js/handlingErors.js"></script>
+<!-- <script src="/public/bootstrap/js/modal.js"></script>
+<script src="/public/bootstrap/js/signingUpModal.js"></script>
+ -->
+

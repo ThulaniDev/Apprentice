@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/footer.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/styling.css">
+      
+        
+    </head>
+    <body>
+       
+        <!-- navigation bar -->
+        <nav class="navbar navbar-light navColoring" id="nav" >
+            
+            <button class="navbar-toggler" type="button" id="navButton" data-toggle="collapse" data-target = "#navInfo" aria-controls = "navInfo" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar navbar-toggler-icon"></span>
+
+            </button>
+            <a class="nav nav-item nav-link ml-1" id="signing-out-brand" href="/">Apprentice</a>
+            
+            <a class="navbar navbar-brand my-2" href="#"></a>
+            
+            <div class="collapse navbar-collapse" id="navInfo">
+                <div class="navbar-nav my-4">
+                    
+                    <a class="nav nav-item nav-link ml-1 active" href="#">Home <span class="sr-only"></span></a>
+                    <a class="nav nav-item nav-link ml-1" href="#">Newsfeed</a>
+                    <a class="nav nav-item nav-link ml-1" href="#">Contact Us</a>
+                    <a class="nav nav-item nav-link ml-1" href="#">About Us</a>
+                    
+                </div>
+
+            </div>
+                    
+        </nav>
+        <div class="container">
+            <div class="row" id="row-cards">
+                <div class="col-lg col-md col-sm" >
+                    <div class="card mx-3 my-4" id="uploadingCardContent" >
+                        <div class="card-titlle">
+                            <h3 class="words mx-3 my-4">Upload Course<hr></h3>
+                        </div>  
+                            <div class="modal-body">
+                                
+                                <div class="mx-3 my-5">
+                                    <input class="form form-control-file"  placeholder="Upload Source" name="txtFileUpload" type="file"/>
+                                        
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary mb-3" id="Uploadbtn" type="submit">Upload</button> 
+                                <!-- <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                             -->
+                            </div>
+                            
+                        
+                    </div>
+                   
+                    
+                </div>
+                
+            </div>
+
+        </div>
+        
+        <script src="/public/bootstrap/js/bootstrap/jquery.js"></script>
+        <script src="/public/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+    </body>
+</html>
